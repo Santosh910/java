@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div tag</title>
+    <style>
+        .main{
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;
+        }
+        #parent-row-1{
+           width: 500px; 
+           height:250px;
+        }
+        .col1{
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+            float: left;
+            text-align: center;
+        }
+        .col2{
+            width: 250px;
+            height: 250px;
+            background-color:red;
+            float: left;
+            text-align: center;
+        }
+        #parent-row-2{
+           width: 500px; 
+           height:250px;
+        }
+        .col1{
+            width: 250px;
+            height: 250px;
+            background-color:green;
+            float: left;
+            text-align: center;
+        }
+        .col2{
+            width: 250px;
+            height: 250px;
+            background-color:chartreuse;
+            float: left;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"><!--main div-->
+        <div id="parent-row-1"><!--parent row 1-->
+            <div class="col1"><!--col1-->
+                home
+            </div>
+            <div class="col2"><!--col2-->
+                    about
+            </div>
+        </div><hr>
+        <div id="parent-row-2"><!--parent row 2-->
+            <div class="col1"><!--col1-->
+                        gallery
+            </div> 
+            <div class="col2"><!--col2-->
+                        contact
+            </div> 
+        </div>                    
+
+       
+
+    </div>
+</body>
+</html>
