@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This</title>
 </head>
-<body>
-    
-</body>
 <script>
-    var x = this;
-    document.write(x);
+   var person ={
+    firstname : "santosh",
+    secondname : "surve",
+    fullname : function(){
+        return this.firstname + this.secondname;
+    }
+   };
+   document.write("<h1>" + person.fullname());
 </script>
+<body>
+    <br>
+    <button onclick="this.style.display = 'none'">click me to hide me</button>
+</body>
+
 </html>

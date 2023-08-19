@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body"> 
+     <center>
+     
+   
+    <p id="data">
+        <h1>printable data</h1>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi eius mollitia voluptate distinctio nulla, beatae eligendi numquam ut sed molestias quisquam explicabo totam, aliquam libero, soluta possimus quis sit deleniti!
+
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod cumque pariatur eum, voluptas, molestias sunt nobis corrupti aliquid dolore illo atque praesentium voluptatum dicta. Expedita quasi quaerat molestiae rerum voluptatibus.
+
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est et inventore totam eos, error minus doloribus corporis nihil aliquam? Impedit beatae voluptates quaerat, dolorum perspiciatis ea reiciendis consequuntur nulla laboriosam.
+
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. At totam animi, nihil quis recusandae ipsa rem sequi quibusdam dicta nobis quaerat temporibus sapiente! Eaque quis quos nulla voluptatibus eum blanditiis!
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nostrum officia dolorum cupiditate magni repudiandae est ipsam eos sapiente perferendis tenetur, blanditiis repellat nulla qui eum omnis iusto ad mollitia!
+    </p>
+    <button onclick="printpage()">print content</button> 
+     
+    <p>
+       
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi eius mollitia voluptate distinctio nulla, beatae eligendi numquam ut sed molestias quisquam explicabo totam, aliquam libero, soluta possimus quis sit deleniti!
+
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod cumque pariatur eum, voluptas, molestias sunt nobis corrupti aliquid dolore illo atque praesentium voluptatum dicta. Expedita quasi quaerat molestiae rerum voluptatibus.
+
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est et inventore totam eos, error minus doloribus corporis nihil aliquam? Impedit beatae voluptates quaerat, dolorum perspiciatis ea reiciendis consequuntur nulla laboriosam.
+
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. At totam animi, nihil quis recusandae ipsa rem sequi quibusdam dicta nobis quaerat temporibus sapiente! Eaque quis quos nulla voluptatibus eum blanditiis!
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nostrum officia dolorum cupiditate magni repudiandae est ipsam eos sapiente perferendis tenetur, blanditiis repellat nulla qui eum omnis iusto ad mollitia!
+    </p>
+    </center> 
+</body>
+<script>
+    function printpage(){
+        var body = document.getElementById('body').innerHTML;
+        var data = document.getElementById('data').innerHTML;
+        document.getElementById('body').innerHTML = data;
+        window.print();
+    }
+</script>
+</html>
