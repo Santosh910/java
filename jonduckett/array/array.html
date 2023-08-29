@@ -6,13 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="colors"></div>
 </body>
 <script>
-    var colors;
-    colors = ['white', 'black', 'custom'];
+    // var colors;
+    // colors = ['white', 'black', 'custom'];
 
+    // var el = document.getElementById('colors');
+    // document.write(colors[0]);
+
+    // var colors = new Array('white', 'black', 'custom');
+
+    //creates the array
+    var colors = ['white','black','custom'];
+
+    //update the third item in the array
+    colors[2] = 'beige';
+
+    //get the elements with an id of colors 
     var el = document.getElementById('colors');
-    document.write(colors[0]);
+
+    //replace with third item from the array
+    el.textContent = colors[2];
+    document.write(colors);
 </script>
 </html>

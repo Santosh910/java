@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>subtotal: $<span id="subtotal"></span></div>
+    <div>shipping: $<span id="shipping"></span></div>
+    <div>grandtotal: $<span id="total"></span></div>
+</body>
+<script>
+    var subtotal = (13+1)*5;
+    var shipping = 0.5*(13+1);
+     
+    var total = subtotal + shipping;
+
+    var elSub =document.getElementById('subtotal');
+    elSub.textContent =subtotal;
+    // document.write(total)
+
+    var elShip =document.getElementById('shipping');
+    elShip.textContent =shipping;
+
+    var elTotal =document.getElementById('total');
+    elTotal.textContent =total;
+
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //create variables for the welcome message
+    var greeting = 'howdy ';
+    var name = 'molly';
+    var message =',please check your order:';
+    // concatenate the three variables above to create the welcome message
+    var welcome = greeting + name + message;
+    document.write(welcome);
+
+    //create variable to hold details about the sign
+    var sign = 'montague house';
+    var tiles = sign.length;
+    var subTotal = tiles * 5;
+    var shipping = 7;
+    var grandTotal = subTotal + shipping;
+    document.write(grandTotal);
+
+    //get the element that has an id of greeting
+    var el = document.getElementById('greeting');
+    // replace the content of that element with the personalized welcome message
+    el.textContent = welcome;
+
+    //get the element that has an id of usersign then update its contents
+    var elSign = document.getElementById('userSign');
+    elSign.textContent = sign;
+
+    //get the element that has an id of tiles then update its contents
+    var elTiles = document.getElementById('tiles');
+    elTiles.textContent = tiles;
+
+    //get the elements that has an id of subtotal then update its content
+    var elsubTotal = document.getElementById('subTotal');
+    elsubTotal.textContent = '$' + subTotal;
+
+    //get the element that has an id og shipping then update its content
+    var elship = document.getElementById('shipping')
+    elship.textContent = '$' + shipping;
+
+    //get the element that has an id of grandtotal then update its contents
+    var elGrandTotal = document.getElementById('grandTotal');
+    elGrandTotal.textContent = '$' + grandTotal;
+
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic functiom</title>
+</head>
+<body>
+    <h1>travelworthy</h1>
+    <div id="message">welcome to our site!</div>
+</body>
+<script>
+    var msg = 'sign up to receive our newsletter for 10% off!';
+    function updateMessage(){
+        var el = document.getElementById('message');
+        el.textContent = msg;
+    }
+    updateMessage();
+</script>
+</html>
