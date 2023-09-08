@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="register(event)">
+        <label>Name</label><br>
+        <input type="text" id="name"><br>
+        <label for="">email</label><br>
+        <input type="email" id="email"><br>
+        <label for="">password</label><br>
+        <input type="password" id="password"><br>
+        <label for="">confirm password</label><br>
+        <input type="password" id="confirmpassword"><br>
+        <input type="submit" value="register"><br>
+    </form>
+    <button onclick="getusers()">get data</button>
+
+
+
+    <script>
+        function register(event){
+            event.preventDefault();
+            const userName = document.getElementById('name').value;
+            const userEmail = document.getElementById('email').value;
+            const userPassword = document.getElementById('password').value;
+            const userconfirmPassword = document.getElementById('confirmpassword').value;
+            console.log(userName, userEmail, userPassword)
+            if(userName && userEmail && userPassword && userconfirmPassword){
+                if(userPassword === userconfirmPassword){
+                    //   alert("password is matched")
+                    const userObject = { email:userEmail, name:userName, password:userPassword}
+
+                    var array = JSON.parse(localStorage.getItem("users")) || [];
+
+                    for(var i = 0;i < array.length;i++){
+                        if(array[i].email === userEmail){
+                            return alert("email is already exist,lz try different email")
+                        }
+                    }
+
+
+                    array.push (userObject)
+                    localStorage.setItem("users",JSON.stringify(array))
+                    document.getElementById('name').value="";
+                    document.getElementById('email').value="";
+                    document.getElementById('password').value="";
+                    document.getElementById('confirmpassword').value="";
+                    alert("register succesfully")
+                }else{
+                    alert("password and confirm password not matched")
+                }
+                 
+            }else{
+                alert('all fields are mandatory')
+            }
+        }
+        function getusers(){
+            var users = JSON.parse(localStorage.getItem("users"));
+            console.log(users)
+        }
+    </script>
+</body>
+</html>
